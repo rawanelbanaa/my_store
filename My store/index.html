@@ -1,0 +1,421 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://use.fontawesome.com/efd7d5bbf9.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+        <script>
+        $(document).ready(function() {
+              $(".button").click(function(){
+                var name =$(this).attr("data_filter");
+                if (name=="all"){
+                    $(".filter").show("2000");
+                }
+                else{
+                    $(".filter").not("."+name).hide("2000");
+                    $(".filter").filter("."+name  ).show("2000");
+                }
+                });
+           
+            $(".filter-container li").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            $(".list_four li").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        });    
+        </script>
+    </head>
+    <body>
+        <!--header-->
+        <header id="header">
+                                        <!------------header_part_one---------->
+            <div class="part_one" id="close">
+                <div class="container">
+                    <ul class="list_one">
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="hidden2"> +569-77-68-12 </span></a></li>
+                        <li><a href="#"><i class="fa fa-envelope-open-o" aria-hidden="true"></i><span class="hidden2"> example@gmail.com </span></a></li>
+                    </ul>
+                    <ul class="list_two">
+                        <li><a href="#" class="dropbtn "><i class= "fa fa-usd" aria-hidden="true"></i> USD</a></li>
+                        <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> <span class="hidden3"> MY Account </span></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+                                        <!------------header_part_two---------->
+            <div class="part_two" >
+                <div class="container">
+                        <h1 class="name">My Store </h1>
+                        <div class="search">
+                            <input type="text" placeholder="search here" class="input_search">
+                            <button type="submit" value="search" class="btn_search">  <i class="fa fa-search" aria-hidden="true"></i> Search</button> 
+                        </div>
+                    <div class="list_three">    
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>  <span class="hidden">Your Wish List</span> </a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp <span class="hidden">Your Cart</span>  </a></li>
+                            <li><a href="#popup"  class="nav-icon"> <i class="fa fa-bars" aria-hidden="true"></i> <a> </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                                        <!------------header_part_three---------->
+            <div class="part_three ">
+                <div class="container">
+                    <ul class="list_four">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#hot">Hot Deals</a></li>
+                        <li><a href="#cat">Categories</a></li>
+                        <li><a href="#cat">Cameras</a></li>
+                        <li><a href="#cat">Phone</a></li>
+                        <li><a href="#cat" >Laptops</a></li>
+                        <li><a href="#cat">Accessories</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header> 
+                                        <!------------------popup-------------------->
+        <div class="popup_background" id="popup">
+            <a class="popup-close" href="#close"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <div class="popup">
+                <ul class="list-popup">
+                    <li class="popup-first-row"><a href="index.html">Home</a></li>
+                    <li class="popup-second-row">  <a href="#hot"  class="left">Hot Deals</a></li>
+                    <li class="popup-second-row"> <a href="#cat" class="right">Categories</a> </li>
+                    <li class="popup-second-row"><a href="#cat" class="left">Phone</a> </li>
+                    <li class="popup-second-row" ><a href="#cat"  class="right">Laptops</a></li>
+                    <li class="popup-second-row"><a href="#cat" class="left">Cameras</a></li>
+                    <li class="popup-second-row"> <a href="#cat"  class="right"> Accessories</a></li>
+                </ul>
+            </div>
+        </div>
+                                        <!------------body_section_one---------->
+        <div class="section_one" id="hot">
+            <div class="container">
+                <div class="card card_one">
+                    <img src="image/laptop.jpeg">
+                    <a href="#cat">
+                        <div class="slide">
+                            <div class="slide_container">
+                                <p>Laptops</p>
+                                <p>Collection</p>
+                                <p>shop now <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></p>
+                            </div>
+                        </div>    
+                    </a> 
+                </div>
+                <div class="card card_two">
+                    
+                    <img src="image/phone.jpg">
+                    <a href="#cat">
+                        <div class="slide">
+                            <div class="slide_container">
+                                <p>Phones</p>
+                                <p>Colection</p>
+                                <p>shop now <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></p>
+                            </div>
+                        </div>    
+                    </a> 
+                </div>
+                <div class="card card_three">
+                    <img src="image/camera.jpg">
+                    <a href="#cat">
+                        <div class="slide">
+                            <div class="slide_container">
+                                <p>Cameras</p>
+                                <p>Colection</p>
+                                <p>shop now <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></p>
+                            </div>
+                        </div>    
+                    </a> 
+                </div>
+            </div>
+        </div> 
+                                          <!------------body_section_two_products---------->
+        <div class="section_two" id="cat">
+            <div class="container">
+                <h1>PRODUCTS</h1>
+                <ul class="filter-container">
+                    <li  data_filter="all" class="button active" >All</li>
+                    <li data_filter="laptops" class="button" >Laptops</li>
+                    <li data_filter="cameras" class="button">Cameras</li>
+                    <li data_filter="phones" class="button">Phones</li>
+                    <li data_filter="accessories" class="button">Accessories</li>
+                </ul>
+            </div>
+        </div>
+                                         <!------------body_section_three_cards---------->
+        <div class="section_three" id="products">
+            <div class="container">
+                <div class="card_product filter cameras all">
+                   <div class="product-container">
+                    <div href="prouduct_info.html"class="img_product">
+                        <a href="prouduct_info.html"><img src="image/camera2.jpeg"></a>
+                    </div>
+                    <div class="info_product">
+                        <h4>Cameras</h4>
+                        <p>Camera Canon </p>
+                        <strong> $1050 </strong> <del>$1550</del>
+                    </div>
+                    <div class="icon_product">
+                        <fieldset>
+                        <legend>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        </legend>
+                        <div class="icons">
+                            <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>
+                
+                <div class="card_product filter phones">
+                   <div class="product-container">
+                    <div href="prouduct_info.html"class="img_product">
+                    <a href="prouduct_info.html"> <img src="image/smartphone.jpg"></a>
+                    </div>
+                    <div class="info_product">
+                        <h4>Phones</h4>
+                        <p>Product Name</p>
+                        <strong> $555 </strong> <del>$700</del>
+                    </div>
+                    <div class="icon_product">
+                        <fieldset>
+                        <legend>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </legend>
+                        <div class="icons">
+                            <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>
+                <div class="card_product filter accessories">
+                    <div class="product-container">
+                        <div href="prouduct_info.html"class="img_product">
+                        <a href="prouduct_info.html"> <img src="image/keyboard.jpg"></a>
+                        </div>
+                        <div class="info_product">
+                            <h4>Accessories</h4>
+                            <p>White keyboard </p>
+                            <strong> $225 </strong> <del>$300</del>
+                        </div>
+                        <div class="icon_product">
+                            <fieldset>
+                            <legend>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            </legend>
+                            <div class="icons">
+                                <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>
+                <div class="card_product filter laptops">
+                   <div class="product-container">
+                    <div href="prouduct_info.html"class="img_product">
+                        <a href="prouduct_info.html"> <img src="image/laptop2.jpg"></a>
+                   </div>
+                    <div class="info_product">
+                        <h4>Accessories</h4>
+                        <p>product name</p>
+                        <strong> $3999 </strong> <del>$4500</del>
+                    </div>
+                    <div class="icon_product">
+                        <fieldset>
+                        <legend>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </legend>
+                        <div class="icons">
+                            <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>
+                <div class="card_product filter accessories">
+                    <div class="product-container">
+                        <div href="prouduct_info.html"class="img_product">
+                            <a href="prouduct_info.html"> <img src="image/headphones2.jpg"></a>
+                        </div>
+                        <div class="info_product">
+                            <h4>Accessories</h4>
+                            <p>Black HeadPhones</p>
+                            <strong> $755,00 </strong> <del>$1000</del>
+                        </div>
+                        <div class="icon_product">
+                            <fieldset>
+                            <legend>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            </legend>
+                            <div class="icons">
+                                <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>
+                <div class="card_product filter laptops">
+                   <div class="product-container">
+                    <div href="prouduct_info.html"class="img_product">
+                 <a href="prouduct_info.html"> <img src="image/laptop1.jpg"></a>                   
+                     </div>
+                    <div class="info_product">
+                        <h4>Accessories</h4>
+                        <p>product name </p>
+                        <strong> $3250 </strong> <del>$3500</del>
+                    </div>
+                    <div class="icon_product">
+                        <fieldset>
+                        <legend>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </legend>
+                        <div class="icons">
+                            <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                            <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                   </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>
+                <div class="card_product filter cameras">
+                    <div class="product-container">
+                        <div href="prouduct_info.html"class="img_product">
+                                 <a href="prouduct_info.html"> <img src="image/camera1.jpeg"></a>
+                        </div>
+                        <div class="info_product">
+                            <h4>Cameras</h4>
+                            <p>Product Name </p>
+                            <strong> $1399 </strong> <del>$1500</del>
+                        </div>
+                        <div class="icon_product">
+                            <fieldset>
+                            <legend>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </legend>
+                            <div class="icons">
+                                <a href="prouduct_info.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="prouduct_info.html"><i class="fa fa-exchange" aria-hidden="true"></i></a>
+                                <a href="prouduct_info.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="prouduct_info.html">ADD TO CART</a> 
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!--------------social_icons------------->
+        <div class="social_icons">
+            <div class="container_icons">
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-share-square" aria-hidden="true"></i></a>
+            </div>
+        </div> 
+              <!-- ----------------------Footer-------------------- -->
+        <footer>
+            <div class="includes">
+                <div class="footer_container">
+                    <ul class="line">
+                        <li><h4>ABOUT US</h4></li>
+                        <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit,</p></li>
+                        <li><p><i class="fa fa-map-marker" aria-hidden="true"></i> 1734 45-Road</a></p></li> 
+                        <li></li><p><i class="fa fa-phone" aria-hidden="true"></i> +569-77-68-12 </p></li>
+                        <li><p><i class="fa fa-envelope-open-o" aria-hidden="true"></i> example@gmail.com</p></li>
+                    </ul>
+                </div>
+                <div class="footer_container">   
+                    <ul class="line">
+                        <li><h4>CAREGORIES </h4></li>
+                        <li><p><a href="#hot">Hot Deals</a></p></li> 
+                        <li><p><a href="#cat">Cameras</a></p></li>
+                        <li><p><a href="#cat">Phone</a></p></li>
+                        <li><p><a href="#cat">laptops</a></p></li>
+                        <li></li><p><a href="#cat">Accessories</a></p></li>
+                    </ul>
+                </div>
+                <div class="footer_container"> 
+                    <ul class="line">
+                       <li> <h4>INFORMATION</h4></li>
+                        <li><p><a href="#header"> About Us</a></p></li>
+                        <li><p><a href="#header">Contact Us</a></p></li>
+                        <li><p><a href="#header">Privacy Policy</a></p></li>
+                        <li><p><a href="#header">Orders and Returns</a></p></li>
+                        <li> <p><a href="#header">Terms & Condition</a></p></li>
+                    </ul>
+                </div>
+                <div class="footer_container">
+                    <ul class="line">
+                        <li><h4>SERVICE</h4></li>
+                        <li><p><a href="#header"> My Account</a></p></li>
+                        <li><p><a href="#header">View Cart</a></p></li>
+                        <li> <p><a href="#header">Wish List</a></p></li>
+                        <li> <p><a href="#header">Track My Order</a></p></li>
+                        <li> <p><a href="#header">Help</a></p></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
